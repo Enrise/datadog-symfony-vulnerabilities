@@ -68,6 +68,13 @@ When something is not working you can perform the following checks:
 - Run `sudo /etc/init.d/datadog-agent info` to see if the check is running and if it shows any errors
 - Use the Datadog Metrics Explorer to check if the metric is available and what it's value is
 
+Note
+----
+
+This Datadog check is as basic as possible to prevent the need for new dependencies.
+
+If you don't mind dependencies you can modify this check to make use of the SensioLabs Security Checker CLI tool (see https://github.com/sensiolabs/security-checker). And for example the Python `requests` module can accomplish most of this script in just a few lines, but is not installed by default.
+
 License
 -------
 
