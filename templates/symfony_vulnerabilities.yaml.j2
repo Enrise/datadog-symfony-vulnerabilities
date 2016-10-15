@@ -1,0 +1,9 @@
+init_config:
+    min_collection_interval: {{ dwv_datadog_check_interval }}
+
+instances:
+    - name: Local composer.lock checks
+      lock_files:
+      {% for item in dwv_composer_lock_files %}
+        - {{ item }}
+      {% endfor %}
