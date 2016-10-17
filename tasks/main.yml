@@ -4,14 +4,10 @@
     src: symfony_vulnerabilities.py
     dest: "{{ dwv_datadog_checks_path }}/symfony_vulnerabilities.py"
     mode: 0644
+  notify: restart datadog-agent
 
 - name: Configure Symfony vulnerabilities check for Datadog
   template:
     src: symfony_vulnerabilities.yaml.j2
     dest: "{{ dwv_datadog_conf_path }}/symfony_vulnerabilities.yaml"
-
-- name: Restart Datadog Agent
-  service:
-    name: datadog-agent
-    state: restarted
-    enabled: true
+  notify: restart datadog-agent
