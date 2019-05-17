@@ -16,7 +16,7 @@ class SymfonyCheck(AgentCheck):
         vulnerability_count = 0
 
         for file in lock_files:
-            vulnerability_count += int(self.post_multipart('security.sensiolabs.org', '/check_lock', file))
+            vulnerability_count += int(self.post_multipart('security.symfony.com', '/check_lock', file))
 
         self.gauge('symfony.core.vulnerabilities', vulnerability_count)
 

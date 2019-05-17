@@ -5,7 +5,7 @@ Adds a check to Datadog which checks local installed Symfony installation(s) for
 
 This check is performed using the composer.lock file in combination with SensioLabs Security Advisories Checker API.
 
-Visit https://security.sensiolabs.org/ for a complete list of supported packages for this API.
+Visit https://security.symfony.com for a complete list of supported packages for this API.
 
 Be aware the composer.lock file is uploaded to the above mentioned API, so make sure the file does not contain information you don't want to be uploaded to this API.
 
@@ -64,7 +64,7 @@ When something is not working you can perform the following checks:
 
 - Update Datadog Agent to the latest release
 - Make sure the path to the composer.lock file is correct
-- Visit `https://security.sensiolabs.org/check` and upload the composer.lock file and see if this is working correctly
+- Visit `https://security.symfony.com/check` and upload the composer.lock file and see if this is working correctly
 - Run `sudo /etc/init.d/datadog-agent info` to see if the check is running and if it shows any errors
 - Use the Datadog Metrics Explorer to check if the metric is available and what it's value is
 
